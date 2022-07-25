@@ -24,9 +24,8 @@ import HourData from "./HourData.vue";
 import TemperatureData from "./TemperatureData.vue";
 import MoodList from "./MoodList.vue";
 
-
 export default {
-    components:{
+    components: {
         HourData,
         TemperatureData,
         MoodList,
@@ -66,7 +65,6 @@ export default {
                 this.hourData = response.data.hourly.time;
                 console.log(parseInt(this.temperatureData[this.tarih.hours]));
                 return parseInt(this.temperatureData[this.tarih.hours]);
-                
             });
     },
 
@@ -94,7 +92,7 @@ export default {
     margin-top: 60px;
 }
 .cards {
-  border: 1px solid rebeccapurple;
+    border: 1px solid rebeccapurple;
     transition: all 0.5s ease;
     margin: 20px;
 }
@@ -108,7 +106,8 @@ export default {
     color: rebeccapurple;
 }
 .imge {
-  border: 1px solid salmon;
+    border: 1px solid salmon;
     border-radius: 10px;
 }
 </style>
+

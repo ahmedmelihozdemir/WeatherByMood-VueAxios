@@ -1,40 +1,117 @@
 <template>
-    <div class="container ">
-      <!-- <h6>This Component is Mood List</h6> -->
-      <div class="row">
-        <div class="cards col col-md-4 m-auto" v-if="0 < temperatureData[tarih.hours] && temperatureData[tarih.hours] <= 5">
-            <div class="mood">Sick</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/326/200/300" alt="" />
+    <div class="container">
+        <!-- <h6>This Component is Mood List</h6> -->
+        <div class="row">
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="
+                    0 < temperatureData[tarih.hours] &&
+                    temperatureData[tarih.hours] <= 5
+                "
+            >
+                <div class="mood">Sick</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/326/200/300"
+                    alt=""
+                />
+            </div>
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="
+                    5 < temperatureData[tarih.hours] &&
+                    temperatureData[tarih.hours] <= 10
+                "
+            >
+                <div class="mood">Depressed</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/22/200/300"
+                    alt=""
+                />
+            </div>
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="
+                    10 < temperatureData[tarih.hours] &&
+                    temperatureData[tarih.hours] <= 15
+                "
+            >
+                <div class="mood">Low</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/220/200/300"
+                    alt=""
+                />
+            </div>
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="
+                    15 < temperatureData[tarih.hours] &&
+                    temperatureData[tarih.hours] <= 20
+                "
+            >
+                <div class="mood">Cheerful</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/129/200/300"
+                    alt=""
+                />
+            </div>
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="
+                    20 < temperatureData[tarih.hours] &&
+                    temperatureData[tarih.hours] <= 25
+                "
+            >
+                <div class="mood">Joyful</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/308/200/300"
+                    alt=""
+                />
+            </div>
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="
+                    25 < temperatureData[tarih.hours] &&
+                    temperatureData[tarih.hours] <= 30
+                "
+            >
+                <div class="mood">Joyful</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/297/200/300"
+                    alt=""
+                />
+            </div>
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="
+                    30 < temperatureData[tarih.hours] &&
+                    temperatureData[tarih.hours] <= 35
+                "
+            >
+                <div class="mood">Bored</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/680/200/300"
+                    alt=""
+                />
+            </div>
+            <div
+                class="cards col col-md-4 m-auto"
+                v-if="temperatureData[tarih.hours] > 35"
+            >
+                <div class="mood">Angry</div>
+                <img
+                    class="imge mb-4"
+                    src="https://picsum.photos/id/719/200/300"
+                    alt=""
+                />
+            </div>
         </div>
-        <div class="cards col col-md-4 m-auto" v-if="5 < temperatureData[tarih.hours] && temperatureData[tarih.hours] <= 10">
-            <div class="mood">Depressed</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/22/200/300" alt="" />
-        </div>
-        <div class="cards col col-md-4 m-auto" v-if="10 < temperatureData[tarih.hours] && temperatureData[tarih.hours] <= 15">
-            <div class="mood">Low</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/220/200/300" alt="" />
-        </div>
-        <div class="cards col col-md-4 m-auto" v-if="15 < temperatureData[tarih.hours] && temperatureData[tarih.hours] <= 20">
-            <div class="mood">Cheerful</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/129/200/300" alt="" />
-        </div>
-        <div class="cards col col-md-4 m-auto" v-if="20 < temperatureData[tarih.hours] && temperatureData[tarih.hours] <= 25">
-            <div class="mood">Joyful</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/308/200/300" alt="" />
-        </div>
-        <div class="cards col col-md-4 m-auto" v-if="25 < temperatureData[tarih.hours] && temperatureData[tarih.hours] <= 30">
-            <div class="mood">Joyful</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/297/200/300" alt="" />
-        </div>
-        <div class="cards col col-md-4 m-auto" v-if="30 < temperatureData[tarih.hours] && temperatureData[tarih.hours] <= 35">
-            <div class="mood">Bored</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/680/200/300" alt="" />
-        </div>
-        <div class="cards col col-md-4 m-auto" v-if="temperatureData[tarih.hours] > 35">
-            <div class="mood">Angry</div>
-            <img class="imge mb-4" src="https://picsum.photos/id/719/200/300" alt="" />
-        </div>
-      </div>
     </div>
 </template>
 
@@ -42,7 +119,6 @@
 import axios from "axios";
 
 export default {
-
     data() {
         return {
             heats: 5,
@@ -76,13 +152,8 @@ export default {
             .then((response) => {
                 this.temperatureData = response.data.hourly.temperature_2m;
                 this.hourData = response.data.hourly.time;
-                /* console.log(response.data.hourly.temperature_2m[0]);
-                console.log(response.data.hourly.time[0]); 
-                console.log(this.hourData);
-                console.log(this.temperatureData); */
                 console.log(parseInt(this.temperatureData[this.tarih.hours]));
                 return parseInt(this.temperatureData[this.tarih.hours]);
-                /* return Number(this.temperatureData[this.tarih.hours]); */
             });
     },
 
@@ -110,7 +181,7 @@ export default {
     margin-top: 60px;
 }
 .cards {
-  border: 1px solid rebeccapurple;
+    border: 1px solid rebeccapurple;
     transition: all 0.5s ease;
     margin: 20px;
 }
@@ -124,7 +195,7 @@ export default {
     color: rebeccapurple;
 }
 .imge {
-  border: 1px solid salmon;
+    border: 1px solid salmon;
     border-radius: 10px;
 }
 </style>

@@ -43,7 +43,7 @@ export default {
                 this.temperatureData = response.data.hourly.temperature_2m;
                 this.hourData = response.data.hourly.time;
                 console.log(parseInt(this.temperatureData[this.tarih.hours]));
-                return parseInt(this.temperatureData[this.tarih.hours]);
+                parseInt(this.temperatureData[this.tarih.hours]);
             });
     },
 

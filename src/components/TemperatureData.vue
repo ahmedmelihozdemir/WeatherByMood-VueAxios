@@ -44,7 +44,6 @@ export default {
                 this.hourData = response.data.hourly.time;
                 console.log(parseInt(this.temperatureData[this.tarih.hours]));
                 return parseInt(this.temperatureData[this.tarih.hours]);
-
             });
     },
 
@@ -71,5 +70,4 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
 }
-
 </style>
